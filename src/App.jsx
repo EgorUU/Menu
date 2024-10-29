@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react'
 const App = () => {
 	const [show, setShow] = useState(false)
-	const categories = ['Завтраки', "Салаты и Закуски", "Супы", "Лепим Сами (Пельмени)", "Горячие Закуски", 'Хлеб', 'Горячие Блюда "Мясо"', 'Горячие Блюда "Рыба"', "Блюда на Компанию", "Гарниры", "Десертная Карта", "Молочные Коктейли", "Свежевыжетые соки", "Напитки в Ассортименте", "Натуральные напитки", "Безалкогольные напитки", "Чаи", "Ароматные Чаи", "Алкогольные напитки", "Горячие напитки"]
+	const categories = ['Завтраки', "Салаты и Закуски", "Супы", "Лепим Сами (Пельмени)", "Горячие Закуски", 'Хлеб', 'Горячие Блюда "Мясо"', 'Горячие Блюда "Рыба"', "Блюда на Компанию", "Гарниры", "Десертная Карта", "Молочные Коктейли", "Свежевыжетые соки", "Напитки в Ассортименте", "Натуральные напитки", "Кофе", "Чаи", "Ароматные Чаи", "Алкогольные напитки", "Горячие напитки"]
     const [choice, setChoice] = useState('Завтраки')
     const choiceFunc = () => {
     	let j = 0
@@ -37,7 +37,7 @@ const App = () => {
 		        <Offcanvas.Body>
 		         	{
 		         		categories.map((el, index) => (
-		         			<button disabled={checkArray(index)} style={{opacity: checkArray(index) && "0.9"}} className="canvas-item" key={index} onClick={() => {
+		         			<button disabled={checkArray(index)} style={{opacity: checkArray(index) && "0.7"}} className="canvas-item" key={index} onClick={() => {
 		         				setChoice(el)
 		         				setShow(!show)
 		         			}}>
